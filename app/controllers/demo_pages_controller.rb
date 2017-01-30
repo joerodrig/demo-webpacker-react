@@ -1,0 +1,2 @@
+class DemoPagesController < ApplicationController
+end
