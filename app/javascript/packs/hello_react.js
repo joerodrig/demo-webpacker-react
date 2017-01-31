@@ -4,12 +4,15 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ApplicationName from "./ApplicationName";
+const demoStyles = {width: "25px", height: "25px"};
 
 class Hello extends React.Component {
   render() {
     return (
       <div>
-        Hello {this.props.name}!
+        Hello&nbsp;
+        <ApplicationName />
       </div>
     );
   }

@@ -1,0 +1,3 @@
+<% helpers = ActionController::Base.helpers %>
+const digestImgPath = (imgName) => (`<%= helpers.image_path(${imgName}) %>`);
+export default digestImgPath;
