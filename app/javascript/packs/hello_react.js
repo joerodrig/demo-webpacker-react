@@ -4,12 +4,14 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import ApplicationName from "./ApplicationName";
 
 class Hello extends React.Component {
   render() {
     return (
       <div>
-        Hello {this.props.name}!
+        Hello&nbsp;
+        <ApplicationName />
       </div>
     );
   }
