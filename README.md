@@ -1,24 +1,34 @@
-# README
+## Demo Webpacker React
+WIP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Dependencies
+* Ruby 2.3.3
+* yarn/npm
 
-Things you may want to cover:
+# Setup
+```shell
+bundle install
+bin/yarn install
+rake db:create
+rake db:migrate
+```
 
-* Ruby version
+# Development
+To begin development, you need to boot up your Rails server and the Webpack
+dev server which compiles all of your Javascript code:
+```shell
+rails s
+bin/webpack-dev-server
+```
 
-* System dependencies
+# Client Tests
+- TODO: Jest
 
-* Configuration
+# React Component Library
+- TODO: React-styleguidist
 
-* Database creation
+# Deploying
+- TODO
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Contributions
+I need your help
