@@ -1,0 +1,11 @@
+.demo-roboto-medium {
+  font-family: map-get($font-families, roboto-medium);
+}
+
+.demo-roboto-italic {
+  font-family: map-get($font-families, roboto-italic);
+}
+
+.demo-roboto-light {
+  font-family: map-get($font-families, roboto-light);
+}

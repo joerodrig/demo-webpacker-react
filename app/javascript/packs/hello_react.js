@@ -12,6 +12,21 @@ class Hello extends React.Component {
       <div>
         Hello&nbsp;
         <ApplicationName />
+        <div>
+          <h3>Importing Fonts</h3>
+          <ul>
+            <li>
+              <p className="demo-roboto-light">This should be Roboto Light</p>
+            </li>
+            <li>
+              <p className="demo-roboto-medium">This should be Roboto Medium</p>
+            </li>
+            <li>
+              <p className="demo-roboto-italic">This should be Roboto Italic</p>
+            </li>
+          </ul>
+        </div>
+
       </div>
     );
   }
