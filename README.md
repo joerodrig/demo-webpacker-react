@@ -22,7 +22,18 @@ bin/webpack-dev-server
 ```
 
 # Client Tests
-- TODO: Jest
+We're using Jest to test our Javascript modules
+The tests are located in our `assets/javascript/__tests__` folder
+
+To run the tests, from the apps root directory run:
+```shell
+bin/yarn test
+```
+
+Alternatively, if you want to have Jest re-run when files are changed, run:
+```shell
+bin/yarn test -- --watch
+```
 
 # React Component Library
 - TODO: React-styleguidist
