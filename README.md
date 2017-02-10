@@ -16,8 +16,11 @@ rake db:migrate
 
 # Setting up puma-dev
 1) Follow the initial installation instructions given in [puma-dev](https://github.com/puma/puma-dev)
+
 2) Link the repository: `puma-dev link ~/path/to/demo-webpacker-react`
+
 3) TODO:[SETUP REACT-STYLEGUIDIST] -> Link the styleguide dev server: `echo 4000 > ~/.puma-dev/styleguide.demo-webpacker-react`
+
 4) Create a `.powenv` file in the root directory that contains any necessary puma-dev configuration. In my case, I'm using Chruby to set my Ruby versions. This config ensures puma-dev uses the correct Ruby:
 
 	source /usr/local/share/chruby/chruby.sh
@@ -27,7 +30,7 @@ rake db:migrate
 5) Now you can initialize your puma-dev server via: `puma-dev`
 - This will start your rails server at `demo-webpacker-react.dev`
 
-6) While puma-dev is running and the styleguide server, you can access the styleguide server at: `styleguide.demo-webpacker-react.dev`
+6) While puma-dev is running and the styleguide server, you can access the styleguide server at:  `styleguide.demo-webpacker-react.dev`
 - NOTE: You have to run the styleguide server manually first by typing `bin/yarn styleguide-server`
 
 # Development
