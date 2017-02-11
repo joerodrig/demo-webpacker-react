@@ -1,7 +1,13 @@
 {
   "scripts": {
     "styleguide-server": "styleguidist server --config ../config/webpack/styleguide.js",
-    "styleguide-build": "styleguidist build --config ../config/webpack/styleguide.js"
+    "styleguide-build": "styleguidist build --config ../config/webpack/styleguide.js",
+    "test": "NODE_PATH='./node_modules:../app/javascript' jest"
+  },
+  "jest": {
+    "testPathDirs": [
+      "../app/javascript"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.22.1",
@@ -15,7 +21,8 @@
     "react-styleguidist": "^4.6.3",
     "webpack": "beta",
     "webpack-dev-server": "beta",
-    "webpack-merge": "^2.6.1"
+    "webpack-merge": "^2.6.1",
+    "jest": "^18.1.0"
   },
   "dependencies": {
     "react": "^15.4.2",
