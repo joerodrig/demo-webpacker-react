@@ -22,6 +22,6 @@
 /public/packs
 
 # Ignore node_modules
-vendor/node_modules
+node_modules
 
 npm-debug.log
