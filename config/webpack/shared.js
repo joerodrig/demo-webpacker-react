@@ -1,57 +1,53 @@
 // Note: You must restart bin/webpack-watcher for changes to take effect
-
-var path = require('path')
-var glob = require('glob')
-var extname = require('path-complete-extname')
+const path = require("path");
+const glob = require("glob");
+const extname = require("path-complete-extname");
 
 module.exports = {
-  entry: glob.sync(path.join('..', 'app', 'javascript', 'packs', '*.js*')).reduce(
+  entry: glob.sync(path.resolve(".", "app", "javascript", "packs", "*.js*")).reduce(
     function(map, entry) {
-      var basename = path.basename(entry, extname(entry))
-      map[basename] = entry
-      return map
+      const basename = path.basename(entry, extname(entry));
+      map[basename] = entry;
+      return map;
     }, {}
   ),
 
-  output: { filename: '[name].js', path: path.resolve('..', 'public', 'packs') },
+  output: {filename: "[name].js", path: path.resolve(".", "public", "packs")},
 
   module: {
     rules: [
-      { test: /\.coffee(.erb)?$/, loader: "coffee-loader" },
+      {test: /\.coffee(.erb)?$/, loader: "coffee-loader"},
       {
         test: /\.jsx?(.erb)?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         options: {
-          presets: [
-            'react',
-            [ 'latest', { 'es2015': { 'modules': false } } ]
-          ]
-        }
+          presets: ["react", ["latest", {es2015: {modules: false}}], "stage-0"],
+        },
       },
       {
         test: /.erb$/,
-        enforce: 'pre',
+        enforce: "pre",
         exclude: /node_modules/,
-        loader: 'rails-erb-loader',
+        loader: "rails-erb-loader",
         options: {
-          runner: 'DISABLE_SPRING=1 ../bin/rails runner'
-        }
+          runner: "DISABLE_SPRING=1 ./bin/rails runner",
+        },
       },
-    ]
+    ],
   },
 
   plugins: [],
 
   resolve: {
-    extensions: [ '.js', '.coffee' ],
+    extensions: [".js", ".jsx"],
     modules: [
-      path.resolve('../app/javascript'),
-      path.resolve('../vendor/node_modules')
-    ]
+      path.resolve("./app/javascript"),
+      path.resolve("node_modules"),
+    ],
   },
 
   resolveLoader: {
-    modules: [ path.resolve('../vendor/node_modules') ]
-  }
-}
+    modules: [path.resolve("node_modules")],
+  },
+};
