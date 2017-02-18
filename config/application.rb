@@ -19,5 +19,8 @@ module DemoWebpackerReact
       ActionController::Base.send(:view_paths=, Rails.root.join("app", "templates"))
       ActionController::API.send(:view_paths=, Rails.root.join("app", "templates"))
     end
+
+    # Compile fonts
+    config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
   end
 end
