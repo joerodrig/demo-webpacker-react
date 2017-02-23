@@ -25,3 +25,9 @@
 node_modules
 
 npm-debug.log
+
+# Ignore environment variables
+.env
+
+# Ignore database config
+config/database.yml

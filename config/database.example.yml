@@ -14,7 +14,7 @@ development:
 
 test:
   <<: *default
-  database: demo_webpacker_react_demo
+  database: demo_webpacker_react_test
 
 production:
   adapter: postgresql
