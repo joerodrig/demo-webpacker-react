@@ -1,9 +1,9 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
+// Run this example by adding <%= javascript_pack_tag "hello_react" %> to the head of your layout file,
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from 'react'
-import ReactDOM from 'react-dom'
+import React from "react";
+import ReactDOM from "react-dom";
 import ApplicationName from "./ApplicationName";
 
 class Hello extends React.Component {
@@ -33,5 +33,5 @@ class Hello extends React.Component {
 }
 
 document.addEventListener("DOMContentLoaded", e => {
-  ReactDOM.render(<Hello name="React" />, document.body.appendChild(document.createElement('div')))
+  ReactDOM.render(<Hello name="React" />, document.body.appendChild(document.createElement("div")))
 })
